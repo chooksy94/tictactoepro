@@ -1,0 +1,16 @@
+.board {
+    display: flex;
+    flex-direction: rows;
+    align-items: center;
+  }
+  
+
+  .row {
+    display: flex;
+  }
+
+  .layer {
+    margin-bottom: 10px;
+  }
+  
+  
