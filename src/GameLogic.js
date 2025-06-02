@@ -55,13 +55,14 @@ export const getBestMove = (board) => {
     for (let r = 0; r < 4; r++) {
       for (let c = 0; c < 4; c++) {
         if (!board[l][r][c]) {
-          emptyCells.push({ layer: l, row: r, col: c });
+          emptyCells.push({ layer: l, row: r, col: c }); 
         }
       }
     }
   }
 
-  // 1. Try to win
+  // 1. Try to win with a move
+  
   for (let move of emptyCells) {
     const testBoard = simulateMove(board, move, 'O');
     if (checkWinner(testBoard) === 'O') return move;
